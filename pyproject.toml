@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kbc-quiz-game"
+version = "1.0.0"
+description = "A fan-made KBC style quiz game for the terminal."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+kbc = "kbc.__main__:main"
+
+[tool.setuptools]
+packages = ["kbc"]
+
+[tool.setuptools.package-data]
+kbc = ["questions.json"]
